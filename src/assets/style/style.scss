@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+// دي اكواد خاصه بالحاجات اللي علي مستوي الموقع //
+.green-color {
+  color: #17e790ca;
+}
+.white-color {
+  color: #e8fff5;
+}
+ul li {
+  list-style: none;
+}
+.main-title {
+  position: relative;
+  h3 {
+    font-size: 28px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 110%;
+      width: 15%;
+      right: 43%;
+      height: 2%;
+      border: 2px solid #01f28d;
+    }
+  }
+}
+@media (max-width: 476px) {
+  .main-title {
+    h3 {
+      &::after {
+        width: 60%;
+        right: 20%;
+      }
+    }
+  }
+}
+.text {
+  position: relative;
+  h2 {
+    position: relative;
+    font-size: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25%;
+      height: 20%;
+      border-bottom: 2px solid #fff;
+      top: 30%;
+      left: 5px;
+    }
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #071119;
+  top: 40%;
+  &::after {
+    font-size: 18px !important;
+    color: #01f28d !important;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.bold-text {
+  font-weight: 800;
+}
+/*navbar*/
+body {
+  background-color: #071119;
+}
+@media (max-width: 620px) {
+  .app-nav {
+    li .v-btn {
+      font-size: 10px;
+    }
+  }
+  img {
+    width: 90px !important;
+  }
+}
+/*navbar*/

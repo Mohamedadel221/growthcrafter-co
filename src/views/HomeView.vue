@@ -1,18 +1,37 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <TwoVideos />
+    <PartenrLogo />
+    <PhotoGraphy />
+    <SocialMedia />
+    <VideoBts />
+    <CountersClient />
+    <GrowthInsi />
+    <WhyChoses />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import TwoVideos from "@/components/homepage/TwoVideo.vue";
+import PartenrLogo from "@/components/homepage/PartenrLogo.vue";
+import PhotoGraphy from "@/components/homepage/PhotoGraphy.vue";
+import SocialMedia from "@/components/homepage/SocialMedia.vue";
+import VideoBts from "@/components/homepage/VideoBts.vue";
+import CountersClient from "@/components/homepage/CountersClient.vue";
+import GrowthInsi from "@/components/homepage/GrowthInsi.vue";
+import WhyChoses from "@/components/homepage/WhyChoses.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    TwoVideos,
+    PartenrLogo,
+    PhotoGraphy,
+    SocialMedia,
+    VideoBts,
+    CountersClient,
+    GrowthInsi,
+    WhyChoses,
   },
 };
 </script>

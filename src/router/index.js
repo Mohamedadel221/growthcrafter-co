@@ -1,26 +1,52 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-
+import OurWork from "@/views/OurWork.vue";
+import ContactUs from "@/views/ContactUs.vue";
+import ErrorPage from "@/views/ErrorPage.vue";
 const routes = [
   {
     path: "/",
     name: "home",
     component: HomeView,
+    meta: {
+      title: "Growth Crafterco Home",
+    },
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/our-work",
+    name: "our-work",
+    component: OurWork,
+    meta: {
+      title: "Growth Crafterco Our Work",
+    },
+  },
+  {
+    path: "/contact-us",
+    name: "contact-us",
+    component: ContactUs,
+    meta: {
+      title: "Growth Crafterco Contact Us",
+    },
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "error-page",
+    component: ErrorPage,
+    meta: {
+      title: "Page Not Found",
+    },
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
-
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title;
+  next();
+});
 export default router;
