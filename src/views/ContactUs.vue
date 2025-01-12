@@ -1,11 +1,8 @@
 <template>
-  <div class="parent-contactus mt-10">
-    <div class="contact-content main-title mt-4 mb-5">
-      <h3 class="text-center green-color">Contact Us</h3>
-    </div>
-    <div class="contact-us mt-5">
+  <div class="parent-contactus mt-0">
+    <div class="contact-us mt-0">
       <v-container>
-        <v-row>
+        <v-row class="align-center">
           <v-col cols="12" md="6" lg="6" sm="6">
             <div class="form-contact">
               <form ref="form" @submit.prevent="sendEmail">
