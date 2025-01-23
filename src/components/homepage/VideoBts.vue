@@ -1,5 +1,5 @@
 <template>
-  <div class="video-bts mt-5 pt-2">
+  <div class="video-bts mt-3">
     <div
       class="text-capitalize main-titles text-center position-relative mt-3 mb-5"
     >
@@ -7,7 +7,7 @@
         Commercial & advertising videography
       </h3>
     </div>
-    <div class="video-graphy position-relative mt-4 pt-3 mb-0 pb-0">
+    <div class="video-graphy position-relative mt-3 pt-0 mb-0 pb-0">
       <div class="main-video-graphy position-relative mt-5 mb-2">
         <div class="videogrpahy">
           <video autoplay muted loop playsinline class="videogrpahy">
@@ -54,7 +54,7 @@ export default {};
   .main-titles {
     position: relative;
     h3 {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 }

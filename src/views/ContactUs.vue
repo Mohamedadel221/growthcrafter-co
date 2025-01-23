@@ -6,7 +6,7 @@
     <div class="contact-us mt-0">
       <v-container>
         <v-row class="align-center">
-          <v-col cols="12" md="6" lg="6" sm="6">
+          <v-col cols="12" md="12" lg="6" sm="12">
             <div class="form-contact">
               <form ref="form" @submit.prevent="sendEmail">
                 <h3 class="mx-2 mt-3 mb-2 white-color text-capitalize">
@@ -103,7 +103,7 @@
               </form>
             </div>
           </v-col>
-          <v-col cols="12" md="6" lg="6" sm="6" class="text-center">
+          <v-col cols="12" md="12" lg="6" sm="12" class="text-center">
             <div class="content-right-contact text-capitalize">
               <h2 class="mt-3 mb-2 white-color">Contact Us to get started</h2>
               <p class="text-capitalize mx-2 white-color bold-text">
@@ -284,6 +284,13 @@ export default {
     text-decoration: none;
     font-size: 19px;
     color: #fff;
+  }
+}
+@media (max-width: 767px) {
+  .btn-whats-app {
+    .v-btn {
+      width: 100% !important;
+    }
   }
 }
 </style>

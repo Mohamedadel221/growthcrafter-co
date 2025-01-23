@@ -62,15 +62,17 @@
       <swiper
         :modules="moduels"
         :slides-per-view="4"
-        :space-between="20"
+        :space-between="0"
         navigation
         autoplay
         loop
+        effect="slide"
+        speed="1000"
         :breakpoints="{
-          320: { slidesPerView: 1, spaceBetween: 10 },
-          768: { slidesPerView: 3, spaceBetween: 20 },
-          600: { slidesPerView: 2, spaceBetween: 20 },
-          1024: { slidesPerView: 4, spaceBetween: 30 },
+          320: { slidesPerView: 1, spaceBetween: 0 },
+          768: { slidesPerView: 3, spaceBetween: 0 },
+          600: { slidesPerView: 2, spaceBetween: 0 },
+          1024: { slidesPerView: 4, spaceBetween: 0 },
         }"
       >
         <swiper-slide v-for="(image, index) in imagesSwiper" :key="index">

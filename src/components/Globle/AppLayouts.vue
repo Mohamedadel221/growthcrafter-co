@@ -20,7 +20,7 @@
           windowWidth > 990
         "
       />
-      <ResponNav v-if="windowWidth <= 990 && $route.name != 'two-video'" />
+      <ResponNav v-if="windowWidth <= 990 && $route.name != 'error-page'" />
       <WhatsButton />
       <AppFooter
         v-if="$route.name != 'two-video' && $route.name != 'error-page'"
