@@ -4,7 +4,7 @@
     v-for="content in textandImg"
     :key="content.title"
   >
-    <v-container>
+    <v-container fluid>
       <v-row class="align-center">
         <v-col cols="12" md="6" sm="6" lg="6">
           <div class="text">
@@ -48,6 +48,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.description {
+  p {
+    font-size: 19px;
+  }
+}
 @media (min-width: 600px) and (max-width: 962px) {
   .description {
     p {

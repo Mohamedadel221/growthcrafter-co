@@ -1,7 +1,7 @@
 <template>
   <div class="creative-market mt-3">
     <div class="img-layout">
-      <v-container>
+      <v-container fluid>
         <v-row class="align-center">
           <v-col cols="12" md="8" lg="8" sm="12">
             <div

@@ -17,7 +17,7 @@
         content to your audience
       </p>
     </div>
-    <v-container>
+    <v-container fluid>
       <v-row>
         <v-col cols="12" md="5" sm="12" lg="5">
           <div

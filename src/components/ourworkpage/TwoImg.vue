@@ -1,6 +1,6 @@
 <template>
   <div class="two-img mt-5">
-    <v-container>
+    <v-container fluid>
       <v-row>
         <v-col col="6" v-for="imgs in twoImg" :key="imgs.img">
           <img class="w-100" :src="imgs.img" alt="" />

@@ -109,7 +109,7 @@ export default {
 <style scoped lang="scss">
 .box {
   border: 2px solid #2bae91;
-  padding: 10px;
+  padding: 15px 58px;
   border-radius: 10px !important;
   img {
     width: 25%;
