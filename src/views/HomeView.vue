@@ -1,5 +1,14 @@
 <template>
-  <div class="home">
+  <div class="intro position-relative mt-0 pt-0 mb-0 pb-0" v-if="intro">
+    <div class="main-video-graphy position-relative mt-0 mb-0">
+      <div class="videogrpahy">
+        <video autoplay muted loop playsinline class="videogrpahy">
+          <source src="/videos/intro.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+  <div class="home" v-if="content">
     <TwoVideos />
     <PartenrLogo />
     <PhotoGraphy />
@@ -33,5 +42,22 @@ export default {
     GrowthInsi,
     WhyChoses,
   },
+  data: () => ({
+    intro: false,
+    content: true,
+  }),
 };
 </script>
+<style lang="scss" scoped>
+.main-video-graphy {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  .videogrpahy {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+</style>

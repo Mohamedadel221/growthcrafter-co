@@ -243,6 +243,9 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+.gowrth-insi {
+  padding: 0px 0.5px;
+}
 .img {
   position: relative;
   img {

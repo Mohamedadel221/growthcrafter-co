@@ -1,67 +1,65 @@
 <template>
   <div class="icon-services">
     <v-container fluid>
-      <v-container>
-        <v-row class="align-center">
-          <v-col
-            col="6"
-            lg="3"
-            md="3"
-            sm="6"
-            v-for="icons in titleIconOne"
-            :key="icons.title"
-          >
-            <div class="box">
-              <div class="img text-center">
-                <img :src="icons.img" alt="" />
-              </div>
-              <div class="text-box">
-                <h3
-                  v-html="icons.title"
-                  class="text-capitalize text-center white-color"
-                ></h3>
-              </div>
+      <v-row class="align-center">
+        <v-col
+          col="6"
+          lg="3"
+          md="3"
+          sm="6"
+          v-for="icons in titleIconOne"
+          :key="icons.title"
+        >
+          <div class="box">
+            <div class="img text-center">
+              <img :src="icons.img" alt="" />
             </div>
-          </v-col>
-          <v-col col="12" lg="6" md="6">
-            <div
-              class="box"
-              v-for="servicesPro in servicesProvide"
-              :key="servicesPro.title"
-            >
+            <div class="text-box">
               <h3
-                v-html="servicesPro.title"
-                class="text-capitalize white-color"
+                v-html="icons.title"
+                class="text-capitalize text-center white-color"
               ></h3>
-              <p class="text-capitalize white-color mt-0 mb-0 bold-text">
-                {{ servicesPro.desciription }}
-              </p>
             </div>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col
-            col="6"
-            lg="3"
-            md="3"
-            sm="6"
-            v-for="icon in fourImgIcon"
-            :key="icon.title"
+          </div>
+        </v-col>
+        <v-col col="12" lg="6" md="6">
+          <div
+            class="box"
+            v-for="servicesPro in servicesProvide"
+            :key="servicesPro.title"
           >
-            <div class="box">
-              <div class="img text-center">
-                <img :src="icon.img" alt="" />
-              </div>
-              <div class="text-box">
-                <h3
-                  v-html="icon.title"
-                  class="text-center white-color text-capitalize"
-                ></h3>
-              </div>
+            <h3
+              v-html="servicesPro.title"
+              class="text-capitalize white-color"
+            ></h3>
+            <p class="text-capitalize white-color mt-0 mb-0 bold-text">
+              {{ servicesPro.desciription }}
+            </p>
+          </div>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col
+          col="6"
+          lg="3"
+          md="3"
+          sm="6"
+          v-for="icon in fourImgIcon"
+          :key="icon.title"
+        >
+          <div class="box">
+            <div class="img text-center">
+              <img :src="icon.img" alt="" />
             </div>
-          </v-col>
-        </v-row>
-      </v-container>
+            <div class="text-box">
+              <h3
+                v-html="icon.title"
+                class="text-center white-color text-capitalize"
+              ></h3>
+            </div>
+          </div>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>

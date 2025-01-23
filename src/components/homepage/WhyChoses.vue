@@ -1,7 +1,7 @@
 <template>
   <div class="why-choses mt-3">
     <div class="img-layout">
-      <v-container>
+      <v-container fluid>
         <v-row class="align-center">
           <v-col cols="12" md="8" lg="8" sm="12">
             <div class="content-right-img">
@@ -96,12 +96,18 @@ export default {
     p {
       margin-right: 40px;
     }
+    h2 {
+      font-size: 18px;
+    }
   }
 }
 @media (min-width: 592px) and (max-width: 767px) {
   .content-right-img {
     p {
       margin-right: 50px;
+    }
+    h2 {
+      font-size: 18px;
     }
   }
 }

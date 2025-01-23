@@ -12,7 +12,7 @@
       </p>
     </div>
 
-    <div class="photo-graphy pt-5 mt-5">
+    <div class="photo-graphy pt-0 mt-2">
       <v-container fluid>
         <v-row class="align-center">
           <v-col cols="12" md="4" sm="12" lg="4">
@@ -58,7 +58,7 @@
         </v-row>
       </v-container>
     </div>
-    <div class="my-siwpers px-2 mt-3">
+    <div class="my-siwpers mt-2">
       <swiper
         :modules="moduels"
         :slides-per-view="4"
@@ -67,7 +67,6 @@
         autoplay
         loop
         effect="slide"
-        speed="1000"
         :breakpoints="{
           320: { slidesPerView: 1, spaceBetween: 0 },
           768: { slidesPerView: 3, spaceBetween: 0 },
@@ -119,9 +118,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.my-siwpers {
+  padding: 0px 17.5px;
+}
 .photo-graphy {
   img {
-    border-radius: 5px;
+    border-radius: 10px;
   }
   p {
     font-size: 15px !important;
@@ -133,11 +135,19 @@ export default {
     font-size: 20px;
   }
 }
-@media (max-width: 620px) {
+@media (max-width: 591px) {
   .contnet-photography,
   .photo-graphy {
     p {
-      font-size: 11px !important;
+      font-size: 13px !important;
+    }
+  }
+}
+@media (min-width: 592px) and (max-width: 767px) {
+  .contnet-photography,
+  .photo-graphy {
+    p {
+      font-size: 20px !important;
     }
   }
 }

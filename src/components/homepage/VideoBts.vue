@@ -24,6 +24,9 @@ export default {};
 </script>
 
 <style scoped lang="scss">
+.video-bts {
+  padding: 0px 17.5px;
+}
 .main-video-graphy {
   position: absolute;
   left: 0;

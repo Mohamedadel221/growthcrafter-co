@@ -150,7 +150,7 @@ export default {
 @media (max-width: 768px) {
   .desciri-title {
     p {
-      font-size: 13px;
+      font-size: 11px;
     }
   }
 }

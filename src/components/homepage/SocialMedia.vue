@@ -11,7 +11,7 @@
         deliver a clear and simple message to the customer.
       </p>
     </div>
-    <div class="soicl-media mt-5 pt-5">
+    <div class="soicl-media mt-2 pt-0">
       <v-container fluid>
         <v-row>
           <v-col cols="12" md="4" sm="12" lg="4">
@@ -46,7 +46,7 @@
         </v-row>
       </v-container>
     </div>
-    <div class="my-siwpers px-2 mt-3">
+    <div class="my-siwpers mt-3">
       <swiper
         :modules="moduels"
         :slides-per-view="4"
@@ -55,7 +55,6 @@
         autoplay
         loop
         effect="slide"
-        speed="1000"
         :breakpoints="{
           320: { slidesPerView: 1, spaceBetween: 0 },
           768: { slidesPerView: 3, spaceBetween: 0 },
@@ -108,9 +107,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.my-siwpers {
+  padding: 0px 17.5px;
+}
 .soicl-media {
   img {
-    border-radius: 5px;
+    border-radius: 10px;
   }
 }
 .social-contents,
@@ -123,7 +125,7 @@ export default {
   .social-contents,
   .soicl-media {
     p {
-      font-size: 13px !important;
+      font-size: 11.9px !important;
     }
   }
 }
