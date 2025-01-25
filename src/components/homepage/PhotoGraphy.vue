@@ -129,25 +129,32 @@ export default {
     font-size: 15px !important;
   }
 }
-.contnet-photography,
-.photo-graphy {
+.contnet-photography {
   p {
     font-size: 20px;
   }
 }
 @media (max-width: 591px) {
-  .contnet-photography,
+  .contnet-photography {
+    p {
+      font-size: 12.5px !important;
+    }
+  }
   .photo-graphy {
     p {
-      font-size: 13px !important;
+      font-size: 12px !important;
     }
   }
 }
 @media (min-width: 592px) and (max-width: 767px) {
-  .contnet-photography,
+  .contnet-photography {
+    p {
+      font-size: 12px !important;
+    }
+  }
   .photo-graphy {
     p {
-      font-size: 20px !important;
+      font-size: 12px !important;
     }
   }
 }

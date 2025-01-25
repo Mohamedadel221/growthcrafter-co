@@ -20,7 +20,7 @@
                     density="compact"
                     width="200"
                     height="50"
-                    >{{ $t("viewGrowth") }}</v-btn
+                    >viewGrowth</v-btn
                   >
                 </template>
 
@@ -39,9 +39,9 @@
                       <img
                         loading="lazy"
                         :src="tabs.img"
-                        height="350"
                         alt=""
-                        class="w-75"
+                        width="350"
+                        height="350"
                       />
 
                       <v-tabs center-active height="200" v-model="tabs">
@@ -149,7 +149,7 @@
                     density="compact"
                     width="200"
                     height="50"
-                    >{{ $t("viewGrowth") }}</v-btn
+                    >viewGrowth</v-btn
                   >
                 </template>
 
@@ -211,7 +211,9 @@
 <script>
 export default {
   data: () => ({
-    tabs: null,
+    tabs: {
+      img: require("@/assets/growthInsi/slider-tabs/img_6756.png"),
+    },
     dialog: false,
     images: [
       {

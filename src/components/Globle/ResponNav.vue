@@ -1,6 +1,9 @@
 <template>
   <div class="responsive-nav">
-    <v-app-bar color="#071119">
+    <v-app-bar
+      :style="{ backgroundColor: navbarColor }"
+      class="navbar-animation"
+    >
       <v-container fluid>
         <v-row class="align-center">
           <v-col cols="4" class="d-flex align-center">
@@ -37,9 +40,19 @@ export default {
   inject: ["emitter"],
   data: () => ({
     drawer: false,
+    navbarColor: "#000",
   }),
-
+  mounted() {
+    window.addEventListener("scroll", this.changeNavbarColor);
+  },
   methods: {
+    changeNavbarColor() {
+      if (window.scrollY >= 300) {
+        this.navbarColor = "#071119";
+      } else {
+        this.navbarColor = "#000";
+      }
+    },
     openMenu() {
       this.emitter.emit("openMenu");
     },
@@ -48,6 +61,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar-animation {
+  transition: background-color 0.3s ease-in-out;
+}
 .img-logo {
   img {
     width: 100px;
@@ -56,14 +72,9 @@ export default {
     cursor: pointer;
   }
 }
-.lang {
-  button {
-    font-size: 15px;
-    font-weight: 800;
-  }
-  img {
-    width: 16px !important;
-    height: 16px;
+.responive-price-btn {
+  .v-btn {
+    color: #e8fff5 !important;
   }
 }
 </style>

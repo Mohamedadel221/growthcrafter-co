@@ -20,7 +20,7 @@
             <div class="footer-content">
               <div class="logo-and-text" v-if="content.img">
                 <img class="w-100 mb-2" :src="content.img" alt="" />
-                <p class="bold-text text-capitalize white-color ml-5 mt-2">
+                <p class="text-capitalize white-color ml-5 mt-2">
                   {{ content.title }}
                 </p>
               </div>

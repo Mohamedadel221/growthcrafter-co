@@ -115,17 +115,22 @@ export default {
     border-radius: 10px;
   }
 }
-.social-contents,
-.soicl-media {
+.social-contents {
   p {
     font-size: 20px;
   }
 }
-@media (max-width: 620px) {
-  .social-contents,
-  .soicl-media {
+@media (max-width: 591px) {
+  .social-contents {
     p {
-      font-size: 11.9px !important;
+      font-size: 11.4px !important;
+    }
+  }
+}
+@media (min-width: 592px) and (max-width: 767px) {
+  .social-contents {
+    p {
+      font-size: 12px !important;
     }
   }
 }

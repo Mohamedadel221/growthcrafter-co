@@ -5,7 +5,8 @@
       temporary
       v-model="drawer"
       width="300"
-      color="#071119"
+      :style="{ backgroundColor: navbarColor }"
+      class="navbar-animation"
     >
       <div
         class="text-and-close d-flex mt-3 mb-2 justify-space-between align-center"
@@ -55,9 +56,20 @@ export default {
   data() {
     return {
       drawer: false,
+      navbarColor: "#000",
     };
   },
+  methods: {
+    changeNavbarColor() {
+      if (window.scrollY >= 300) {
+        this.navbarColor = "#071119";
+      } else {
+        this.navbarColor = "#000";
+      }
+    },
+  },
   mounted() {
+    window.addEventListener("scroll", this.changeNavbarColor);
     this.emitter.on("openMenu", () => {
       this.drawer = true;
     });
@@ -66,6 +78,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar-animation {
+  transition: background-color 0.3s ease-in-out;
+}
 .menu-drawer {
   li {
     .v-btn {

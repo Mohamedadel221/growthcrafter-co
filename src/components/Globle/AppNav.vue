@@ -1,6 +1,9 @@
 <template>
   <div class="app-nav">
-    <v-app-bar color="#071119">
+    <v-app-bar
+      :style="{ backgroundColor: navbarColor }"
+      class="navbar-animation"
+    >
       <v-app-bar-title>
         <img
           @click="$router.push({ name: 'home' })"
@@ -41,11 +44,28 @@
 
 <script>
 export default {
-  data: () => ({}),
+  data: () => ({
+    navbarColor: "#000",
+  }),
+  mounted() {
+    window.addEventListener("scroll", this.changeNavbarColor);
+  },
+  methods: {
+    changeNavbarColor() {
+      if (window.scrollY >= 300) {
+        this.navbarColor = "#071119";
+      } else {
+        this.navbarColor = "#000";
+      }
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
+.navbar-animation {
+  transition: background-color 0.3s ease-in-out;
+}
 .app-nav {
   img {
     width: 110px;
@@ -54,17 +74,6 @@ export default {
   li .v-btn {
     color: #e8fff5;
     font-size: 15px;
-  }
-}
-
-.lang {
-  button {
-    font-size: 15px;
-    font-weight: 800;
-  }
-  img {
-    width: 16px;
-    height: 16px;
   }
 }
 </style>

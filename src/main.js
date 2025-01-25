@@ -3,7 +3,6 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import mitt from "mitt";
-import i18n from "./i18n";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -20,7 +19,6 @@ const vuetify = createVuetify({
 createApp(App)
   .use(store)
   .use(vuetify)
-  .use(i18n)
-  .provide("emitter", emitter, "locale", i18n.global.locale)
+  .provide("emitter", emitter)
   .use(router)
   .mount("#app");

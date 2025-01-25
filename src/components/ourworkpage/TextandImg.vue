@@ -53,6 +53,13 @@ export default {
     font-size: 19px;
   }
 }
+@media (max-width: 599px) {
+  .description {
+    p {
+      font-size: 12px;
+    }
+  }
+}
 @media (min-width: 600px) and (max-width: 962px) {
   .description {
     p {
