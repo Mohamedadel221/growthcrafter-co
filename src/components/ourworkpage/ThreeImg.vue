@@ -19,7 +19,7 @@
     </div>
     <v-container fluid>
       <v-row>
-        <v-col cols="12" md="5" sm="12" lg="5">
+        <v-col cols="12" md="5" sm="5" lg="5">
           <div
             class="parent-column"
             v-for="textAndImg in largImg"
@@ -28,7 +28,7 @@
             <img class="w-100" loading="lazy" :src="textAndImg.img" alt="" />
           </div>
         </v-col>
-        <v-col cols="12" md="7" sm="12" lg="7">
+        <v-col cols="12" md="7" sm="7" lg="7">
           <div class="img-our-work" v-for="img in threeImg" :key="img.img">
             <img class="w-100" :src="img.img" alt="" />
             <div class="overlay">

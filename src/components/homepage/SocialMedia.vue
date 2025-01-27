@@ -14,7 +14,7 @@
     <div class="soicl-media mt-2 pt-0">
       <v-container fluid>
         <v-row>
-          <v-col cols="12" md="4" sm="12" lg="4">
+          <v-col cols="12" md="4" sm="4" lg="4">
             <img
               class="w-100"
               loading="lazy"
@@ -22,7 +22,7 @@
               alt=""
             />
           </v-col>
-          <v-col cols="12" md="8" sm="12" lg="8">
+          <v-col cols="12" md="8" sm="8" lg="8">
             <img
               class="w-100"
               src="@/assets/SocialMedia/social-mediabg.jpg"

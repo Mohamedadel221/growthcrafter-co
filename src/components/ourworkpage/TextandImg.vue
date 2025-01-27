@@ -23,7 +23,7 @@
         <v-col cols="12" md="6" sm="6" lg="6">
           <div class="text text-end">
             <div class="img">
-              <img class="w-75" :src="content.img" alt="" />
+              <img class="w-100" :src="content.img" alt="" />
             </div>
           </div>
         </v-col>

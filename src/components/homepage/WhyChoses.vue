@@ -142,10 +142,17 @@ export default {
     opacity: 0.7;
   }
 }
+@media (min-width: 320px) and (max-width: 991px) {
+  .title-grid-three-img {
+    h2 {
+      font-size: 16px !important;
+    }
+  }
+}
 @media (max-width: 1200px) {
   .title-grid-three-img {
     h2 {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
   .content-grid-three-img {

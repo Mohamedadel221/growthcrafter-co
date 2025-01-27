@@ -15,7 +15,7 @@
     <div class="photo-graphy pt-0 mt-2">
       <v-container fluid>
         <v-row class="align-center">
-          <v-col cols="12" md="4" sm="12" lg="4">
+          <v-col cols="12" md="4" sm="4" lg="4">
             <div class="img">
               <img
                 class="w-100"
@@ -25,7 +25,7 @@
               />
             </div>
           </v-col>
-          <v-col cols="12" md="8" sm="12" lg="8">
+          <v-col cols="12" md="8" sm="8" lg="8">
             <img
               class="w-100"
               loading="lazy"
