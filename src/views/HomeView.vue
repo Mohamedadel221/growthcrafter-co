@@ -5,7 +5,6 @@
     <PhotoGraphy />
     <SocialMedia />
     <VideoBts />
-    <!-- <CountersClient /> -->
     <GrowthInsi />
     <WhyChoses />
   </div>
@@ -17,7 +16,6 @@ import PartenrLogo from "@/components/homepage/PartenrLogo.vue";
 import PhotoGraphy from "@/components/homepage/PhotoGraphy.vue";
 import SocialMedia from "@/components/homepage/SocialMedia.vue";
 import VideoBts from "@/components/homepage/VideoBts.vue";
-// import CountersClient from "@/components/homepage/CountersClient.vue";
 import GrowthInsi from "@/components/homepage/GrowthInsi.vue";
 import WhyChoses from "@/components/homepage/WhyChoses.vue";
 
@@ -29,7 +27,6 @@ export default {
     PhotoGraphy,
     SocialMedia,
     VideoBts,
-    // CountersClient,
     GrowthInsi,
     WhyChoses,
   },

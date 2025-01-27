@@ -1,5 +1,5 @@
 <template>
-  <div class="parent-contactus mt-10">
+  <div class="parent-contactus mt-15">
     <div class="contact-content main-title mt-4 mb-5">
       <h3 class="text-center green-color">Contact Us</h3>
     </div>

@@ -22,9 +22,9 @@
             </div>
           </div>
         </v-col>
-        <v-col col="12" lg="6" md="6">
+        <v-col col="12" lg="6" md="6" sm="12">
           <div
-            class="box"
+            class="box larg-box"
             v-for="servicesPro in servicesProvide"
             :key="servicesPro.title"
           >
@@ -109,7 +109,7 @@ export default {
 <style scoped lang="scss">
 .box {
   border: 2px solid #2bae91;
-  padding: 15px 58px;
+  padding: 10px 15px;
   border-radius: 10px !important;
   img {
     width: 25%;
@@ -141,8 +141,13 @@ export default {
 @media (max-width: 767px) {
   .box {
     img {
-      width: 35% !important;
+      width: 25% !important;
     }
+  }
+}
+@media (min-width: 960px) {
+  .larg-box {
+    padding: 20px 17px !important;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-and-img mt-10 mb-3"
+    class="text-and-img mt-0 mb-3"
     v-for="content in textandImg"
     :key="content.title"
   >
@@ -48,6 +48,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.text-and-img {
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .description {
   p {
     font-size: 19px;

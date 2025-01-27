@@ -13,7 +13,7 @@ export default {
   }),
   mounted() {
     window.addEventListener("scroll", () => {
-      if (window.scrollY >= 200) {
+      if (window.scrollY >= 300) {
         this.showBtn = true;
       } else {
         this.showBtn = false;

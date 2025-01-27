@@ -3,6 +3,7 @@
     <v-app-bar
       :style="{ backgroundColor: navbarColor }"
       class="navbar-animation"
+      elevation="0"
     >
       <v-app-bar-title>
         <img

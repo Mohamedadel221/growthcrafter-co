@@ -23,15 +23,6 @@
                 alt=""
                 loading="lazy"
               />
-              <div class="text text-center position-relative">
-                <h2 class="white-color position-relative text-capitalize mb-3">
-                  Photography
-                </h2>
-                <p class="text-capitalize white-color bold-text">
-                  From product photography to lifestyle shots, our team ensures
-                  that every image reflects your brand's identity
-                </p>
-              </div>
             </div>
           </v-col>
           <v-col cols="12" md="8" sm="12" lg="8">
@@ -121,17 +112,14 @@ export default {
 .my-siwpers {
   padding: 0px 17.5px;
 }
-.photo-graphy {
-  img {
-    border-radius: 10px;
-  }
-  p {
-    font-size: 15px !important;
-  }
-}
 .contnet-photography {
   p {
     font-size: 20px;
+  }
+}
+.photo-graphy {
+  img {
+    border-radius: 12px;
   }
 }
 @media (max-width: 591px) {
@@ -140,19 +128,9 @@ export default {
       font-size: 12.5px !important;
     }
   }
-  .photo-graphy {
-    p {
-      font-size: 12px !important;
-    }
-  }
 }
 @media (min-width: 592px) and (max-width: 767px) {
   .contnet-photography {
-    p {
-      font-size: 12px !important;
-    }
-  }
-  .photo-graphy {
     p {
       font-size: 12px !important;
     }

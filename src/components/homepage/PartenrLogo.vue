@@ -5,7 +5,7 @@
         <h3 class="white-color">our partener</h3>
       </div>
     </div>
-    <v-container fluid>
+    <v-container fluid class="">
       <v-row class="align-center">
         <v-col
           v-for="logo in logos"
@@ -71,9 +71,11 @@ export default {
 .logo-img {
   img {
     width: 180px;
+    display: flex;
+    margin: auto;
   }
 }
-@media (max-width: 620px) {
+@media (max-width: 767px) {
   .logo-img {
     img {
       width: 65px !important;
