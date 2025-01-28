@@ -4,7 +4,7 @@
       <h3 class="text-center green-color">Contact Us</h3>
     </div>
     <div class="contact-us mt-0">
-      <v-container>
+      <v-container fluid>
         <v-row class="align-center">
           <v-col cols="12" md="12" lg="6" sm="12">
             <div class="form-contact">

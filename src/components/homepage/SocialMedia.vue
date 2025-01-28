@@ -47,25 +47,31 @@
       </v-container>
     </div>
     <div class="my-siwpers mt-3">
-      <swiper
-        :modules="moduels"
-        :slides-per-view="4"
-        :space-between="0"
-        navigation
-        autoplay
-        loop
-        effect="slide"
-        :breakpoints="{
-          320: { slidesPerView: 1, spaceBetween: 0 },
-          768: { slidesPerView: 3, spaceBetween: 0 },
-          600: { slidesPerView: 2, spaceBetween: 0 },
-          1024: { slidesPerView: 4, spaceBetween: 0 },
-        }"
-      >
-        <swiper-slide v-for="(image, index) in imagesSwiper" :key="index">
-          <img class="w-100" loading="lazy" :src="image" alt="Slide Image" />
-        </swiper-slide>
-      </swiper>
+      <v-container fluid>
+        <swiper
+          :modules="moduels"
+          :slides-per-view="4"
+          :space-between="0"
+          navigation
+          :autoplay="{ delay: 1500 }"
+          loop
+          effect="coverflow"
+          :speed="1000"
+          :grab-cursor="true"
+          :centered-slides="true"
+          :coverflow-effect="coverflowEffect"
+          :breakpoints="{
+            320: { slidesPerView: 2, spaceBetween: 0 },
+            768: { slidesPerView: 3, spaceBetween: 0 },
+            600: { slidesPerView: 2, spaceBetween: 0 },
+            1024: { slidesPerView: 4, spaceBetween: 0 },
+          }"
+        >
+          <swiper-slide v-for="(image, index) in imagesSwiper" :key="index">
+            <img class="w-100" loading="lazy" :src="image" alt="Slide Image" />
+          </swiper-slide>
+        </swiper>
+      </v-container>
     </div>
   </div>
 </template>
@@ -73,7 +79,7 @@
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/swiper-bundle.css";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
 export default {
   data: () => ({
     twoImg: [
@@ -97,7 +103,14 @@ export default {
       require("@/assets/SocialMedia/sliders/13.png"),
       require("@/assets/SocialMedia/sliders/23.png"),
     ],
-    moduels: [Navigation, Autoplay],
+    moduels: [Navigation, Autoplay, EffectCoverflow],
+    coverflowEffect: {
+      rotate: 43,
+      stretch: 0,
+      depth: 40,
+      modifier: 5,
+      slideShadows: true,
+    },
   }),
   components: {
     Swiper,
@@ -107,9 +120,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.my-siwpers {
-  padding: 0px 17.5px;
-}
 .soicl-media {
   img {
     border-radius: 10px;

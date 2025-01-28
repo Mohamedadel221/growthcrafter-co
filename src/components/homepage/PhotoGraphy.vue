@@ -35,10 +35,10 @@
             <v-row class="align-center">
               <v-col
                 class="mt-3"
-                col="4"
-                lg="4"
-                md="4"
-                sm="4"
+                col="6"
+                lg="6"
+                md="6"
+                sm="6"
                 v-for="img in threeImg"
                 :key="img.threeImg"
               >
@@ -50,25 +50,31 @@
       </v-container>
     </div>
     <div class="my-siwpers mt-2">
-      <swiper
-        :modules="moduels"
-        :slides-per-view="4"
-        :space-between="0"
-        navigation
-        autoplay
-        loop
-        effect="slide"
-        :breakpoints="{
-          320: { slidesPerView: 1, spaceBetween: 0 },
-          768: { slidesPerView: 3, spaceBetween: 0 },
-          600: { slidesPerView: 2, spaceBetween: 0 },
-          1024: { slidesPerView: 4, spaceBetween: 0 },
-        }"
-      >
-        <swiper-slide v-for="(image, index) in imagesSwiper" :key="index">
-          <img loading="lazy" class="w-100" :src="image" alt="Slide Image" />
-        </swiper-slide>
-      </swiper>
+      <v-container fluid>
+        <swiper
+          :modules="moduels"
+          :slides-per-view="4"
+          :space-between="0"
+          navigation
+          loop
+          effect="coverflow"
+          :speed="1000"
+          :autoplay="{ delay: 1500 }"
+          :grab-cursor="true"
+          :centered-slides="true"
+          :coverflow-effect="coverflowEffect"
+          :breakpoints="{
+            320: { slidesPerView: 2, spaceBetween: 0 },
+            768: { slidesPerView: 3, spaceBetween: 0 },
+            600: { slidesPerView: 2, spaceBetween: 0 },
+            1024: { slidesPerView: 4, spaceBetween: 0 },
+          }"
+        >
+          <swiper-slide v-for="(image, index) in imagesSwiper" :key="index">
+            <img loading="lazy" class="w-100" :src="image" alt="Slide Image" />
+          </swiper-slide>
+        </swiper>
+      </v-container>
     </div>
   </div>
 </template>
@@ -76,7 +82,7 @@
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/swiper-bundle.css";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
 export default {
   components: {
     Swiper,
@@ -90,9 +96,6 @@ export default {
       {
         img: require("@/assets/PhotoGraphy/img_6878.jpg"),
       },
-      {
-        img: require("@/assets/PhotoGraphy/newphotography1.png"),
-      },
     ],
     imagesSwiper: [
       require("@/assets/PhotoGraphy/sliders/img_6713.jpg"),
@@ -103,15 +106,19 @@ export default {
       require("@/assets/PhotoGraphy/sliders/7.png"),
       require("@/assets/PhotoGraphy/sliders/4.png"),
     ],
-    moduels: [Navigation, Autoplay],
+    moduels: [Navigation, Autoplay, EffectCoverflow],
+    coverflowEffect: {
+      rotate: 43,
+      stretch: 0,
+      depth: 40,
+      modifier: 5,
+      slideShadows: true,
+    },
   }),
 };
 </script>
 
 <style scoped lang="scss">
-.my-siwpers {
-  padding: 0px 17.5px;
-}
 .contnet-photography {
   p {
     font-size: 20px;

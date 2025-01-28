@@ -79,18 +79,18 @@
           </v-col>
           <v-col cols="12" md="6" lg="6" sm="12">
             <div
-              class="text-capitalize main-title text-center position-relative mt-3 mb-5"
+              class="text-capitalize main-title text-center position-relative mt-3 mb-2"
             >
               <h3 class="position-relative pb-1 white-color">
                 Growth insights
               </h3>
             </div>
             <div
-              class="contents mt-5 pt-2"
+              class="contents mt-3 pt-2"
               v-for="growth in imgGrowth"
               :key="growth.title"
             >
-              <h2 class="mt-4 m-2 mx-2 white-color text-capitalize">
+              <h2 class="mt-3 m-2 mx-2 white-color text-capitalize">
                 {{ growth.title }}
               </h2>
               <p
@@ -174,7 +174,7 @@ export default {
     top: -150px !important;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .resv {
     flex-direction: column-reverse !important;
   }

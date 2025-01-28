@@ -60,13 +60,26 @@ ul li {
   border-radius: 50%;
   top: 40%;
   &::after {
-    font: 10px !important;
     color: #01f28d !important;
     display: flex;
     padding: 5px;
     justify-content: center;
     align-items: center;
+    font-size: 30px !important;
   }
+}
+@media(max-width:767px) {
+  .swiper-button-prev,
+.swiper-button-next {
+  &::after {
+    color: #01f28d !important;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px !important;
+  }
+}
 }
 .bold-text {
   font-weight: 800;
