@@ -1,0 +1,3 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On RewriteBase / RewriteRule ^ index.html [QSA,L]
+</IfModule>

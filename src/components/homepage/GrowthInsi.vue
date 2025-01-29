@@ -40,15 +40,15 @@
                         loading="lazy"
                         :src="tabs.img"
                         alt=""
-                        width="350"
-                        height="350"
+                        class="tab-single-img w-25"
+                        heigh="auto"
                       />
 
                       <v-tabs center-active height="200" v-model="tabs">
                         <v-tab
                           v-for="(image, i) in images"
                           :key="i"
-                          class="mx-10"
+                          class="mx-2"
                           :value="image"
                         >
                           <img
@@ -177,6 +177,12 @@ export default {
 @media (max-width: 768px) {
   .resv {
     flex-direction: column-reverse !important;
+  }
+}
+@media (max-width: 767px) {
+  .tab-single-img {
+    width: 300px !important;
+    height: 300px !important;
   }
 }
 </style>

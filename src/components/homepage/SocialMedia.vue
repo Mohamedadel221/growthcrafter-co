@@ -18,7 +18,7 @@
             <img
               class="w-100"
               loading="lazy"
-              src="@/assets/SocialMedia/socialmedianew.png"
+              src="@/assets/SocialMedia/socialmedianew.jpeg"
               alt=""
             />
           </v-col>

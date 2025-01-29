@@ -17,7 +17,7 @@
           <v-col cols="12" md="4" lg="4" sm="4">
             <div class="grid-imgs mt-2">
               <img
-                src="@/assets/PhotoGraphy/protriet.png"
+                src="@/assets/PhotoGraphy/protriet.jpeg"
                 class="w-100"
                 alt=""
                 loading="lazy"
