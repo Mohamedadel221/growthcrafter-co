@@ -1,6 +1,6 @@
 <template>
   <!--section-three-grid-->
-  <div class="we-help-section pt-3">
+  <div class="we-help-section mt-3">
     <v-container fluid>
       <v-row class="align-center resv">
         <v-col cols="12" lg="7" md="7" sm="7">
@@ -95,7 +95,6 @@ export default {
 <style lang="scss" scoped>
 /*three-img-grid*/
 .we-help-section {
-  background-color: #000;
   .imgs-grid {
     display: -ms-grid;
     display: grid;

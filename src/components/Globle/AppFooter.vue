@@ -5,7 +5,7 @@
       :app="true"
       elevation="0"
       absolute
-      color="#071119"
+      color="#000"
     >
       <v-container fluid>
         <v-row class="align-center">
@@ -54,13 +54,10 @@
           </v-col>
           <v-divider></v-divider>
           <v-col cols="12">
-            <div class="copy-right d-flex justify-space-between align-center">
+            <div class="copy-right">
               <p class="text-capitalize bold-text white-color">
                 copyright &copy; {{ new Date().getFullYear() }} Growth
                 Craftersco - All Rights Reserved
-              </p>
-              <p class="text-capitalize bold-text white-color">
-                &copy; Growth Craftersco
               </p>
             </div>
           </v-col>
@@ -162,21 +159,21 @@ ul li {
 @media (max-width: 705px) {
   .copy-right {
     p {
-      font-size: 13px;
+      font-size: 15px;
     }
   }
 }
 @media (max-width: 562px) {
   .copy-right {
     p {
-      font-size: 10px;
+      font-size: 14px;
     }
   }
 }
 @media (max-width: 456px) {
   .copy-right {
     p {
-      font-size: 8px;
+      font-size: 10px;
     }
   }
 }

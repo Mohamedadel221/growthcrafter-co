@@ -3,7 +3,7 @@
     <div
       class="text-capitalize main-title text-center position-relative mt-3 mb-5"
     >
-      <h3 class="white-color position-relative pb-1">social media visual</h3>
+      <h3 class="white-color position-relative pb-1">social media visuals</h3>
     </div>
     <div class="social-contents">
       <p class="mt-0 mb-0 text-center text-capitalize white-color bold-text">
@@ -18,7 +18,7 @@
             <img
               class="w-100"
               loading="lazy"
-              src="@/assets/SocialMedia/IMG_6870.jpg"
+              src="@/assets/SocialMedia/socialmedianew.png"
               alt=""
             />
           </v-col>
@@ -29,9 +29,8 @@
               alt=""
               loading="lazy"
             />
-            <v-row class="align-center">
+            <v-row class="align-center mt-3">
               <v-col
-                class="mt-3"
                 col="6"
                 lg="6"
                 md="6"

@@ -7,8 +7,8 @@
           $route.name == 'two-video'
             ? '0px'
             : windowWidth <= 990
-            ? '30px'
-            : '60px'
+            ? '0px'
+            : '63px'
         }`"
       >
         <slot></slot>

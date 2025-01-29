@@ -11,38 +11,48 @@
         image reflects your brand's identity
       </p>
     </div>
-
     <div class="photo-graphy pt-0 mt-2">
       <v-container fluid>
-        <v-row class="align-center">
-          <v-col cols="12" md="4" sm="4" lg="4">
-            <div class="img">
+        <v-row>
+          <v-col cols="12" md="4" lg="4" sm="4">
+            <div class="grid-imgs mt-2">
               <img
+                src="@/assets/PhotoGraphy/protriet.png"
                 class="w-100"
-                src="@/assets/PhotoGraphy/1.jpeg"
                 alt=""
                 loading="lazy"
               />
             </div>
           </v-col>
-          <v-col cols="12" md="8" sm="8" lg="8">
-            <img
-              class="w-100"
-              loading="lazy"
-              src="@/assets/PhotoGraphy/photo-bg.jpg"
-              alt=""
-            />
-            <v-row class="align-center">
-              <v-col
-                class="mt-3"
-                col="6"
-                lg="6"
-                md="6"
-                sm="6"
-                v-for="img in threeImg"
-                :key="img.threeImg"
-              >
-                <img loading="lazy" class="w-100" :src="img.img" alt="" />
+          <v-col cols="12" md="8" lg="8" sm="8">
+            <div class="grid-imgs mt-2">
+              <img
+                src="@/assets/PhotoGraphy/photo-bg.jpg"
+                class="w-100"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <v-row class="mt-3">
+              <v-col col="6">
+                <div class="two-grid-img">
+                  <img
+                    src="@/assets/PhotoGraphy/img_6878.jpg"
+                    class="w-100"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </v-col>
+              <v-col col="6">
+                <div class="two-grid-img">
+                  <img
+                    src="@/assets/PhotoGraphy/3.png"
+                    loading="lazy"
+                    class="w-100"
+                    alt=""
+                  />
+                </div>
               </v-col>
             </v-row>
           </v-col>
@@ -89,14 +99,6 @@ export default {
     SwiperSlide,
   },
   data: () => ({
-    threeImg: [
-      {
-        img: require("@/assets/PhotoGraphy/3.png"),
-      },
-      {
-        img: require("@/assets/PhotoGraphy/img_6878.jpg"),
-      },
-    ],
     imagesSwiper: [
       require("@/assets/PhotoGraphy/sliders/img_6713.jpg"),
       require("@/assets/PhotoGraphy/sliders/6.png"),
@@ -108,11 +110,11 @@ export default {
     ],
     moduels: [Navigation, Autoplay, EffectCoverflow],
     coverflowEffect: {
-      rotate: 43,
-      stretch: 0,
-      depth: 40,
-      modifier: 5,
-      slideShadows: true,
+      rotate: 50, // ميل السلايدز الجانبية
+      stretch: -20, // تقارب السلايدز لبعضها
+      depth: 200, // زيادة العمق لتأثير ثلاثي الأبعاد أقوى
+      modifier: 2.5, // تعديل قوة التأثير
+      slideShadows: true, // تفعيل الظلال
     },
   }),
 };

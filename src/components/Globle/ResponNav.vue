@@ -7,7 +7,10 @@
       <v-container fluid>
         <v-row class="align-center">
           <v-col cols="4" class="d-flex align-center">
-            <v-app-bar-nav-icon color="#e8fff5" @click="openMenu()">
+            <v-app-bar-nav-icon
+              :style="{ color: textNavbarColor }"
+              @click="openMenu()"
+            >
             </v-app-bar-nav-icon>
           </v-col>
           <v-col cols="4">
@@ -19,9 +22,10 @@
               />
             </div>
           </v-col>
-          <v-col cols="4" class="d-flex justify-end" style="gap: 7px">
+          <v-col cols="4" class="d-flex justify-end" style="gap: 0px">
             <div class="responive-price-btn">
               <v-btn
+                :style="{ color: textNavbarColor }"
                 class="text-capitalize"
                 href="https:///wa.me/+201124908446"
               >
@@ -41,16 +45,25 @@ export default {
   data: () => ({
     drawer: false,
     navbarColor: "#000",
+    textNavbarColor: "#e8fff5",
   }),
   mounted() {
     window.addEventListener("scroll", this.changeNavbarColor);
+    window.addEventListener("scroll", this.changeColorNavbar);
   },
   methods: {
     changeNavbarColor() {
       if (window.scrollY >= 300) {
-        this.navbarColor = "#071119";
+        this.navbarColor = "#efefef";
       } else {
         this.navbarColor = "#000";
+      }
+    },
+    changeColorNavbar() {
+      if (window.scrollY >= 300) {
+        this.textNavbarColor = "#000";
+      } else {
+        this.textNavbarColor = "#e8fff5";
       }
     },
     openMenu() {
@@ -61,6 +74,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.v-app-bar {
+  opacity: 0.7;
+}
 .navbar-animation {
   transition: background-color 0.3s ease-in-out;
 }
@@ -70,11 +86,6 @@ export default {
     display: flex;
     margin: auto;
     cursor: pointer;
-  }
-}
-.responive-price-btn {
-  .v-btn {
-    color: #e8fff5 !important;
   }
 }
 </style>

@@ -11,7 +11,12 @@
       <div
         class="text-and-close d-flex mt-3 mb-2 justify-space-between align-center"
       >
-        <h3 class="text-capitalize white-color px-2">growth crafterco</h3>
+        <h3
+          class="text-capitalize white-color px-2"
+          :style="{ color: textNavbarColor }"
+        >
+          growth crafterco
+        </h3>
         <v-icon @click="drawer = !drawer" class="text-error px-2"
           >mdi-close</v-icon
         >
@@ -22,6 +27,7 @@
             <v-btn
               class="text-capitalize"
               @click="$router.push({ name: 'home' })"
+              :style="{ color: textNavbarColor }"
               >home</v-btn
             >
           </li>
@@ -29,6 +35,7 @@
             <v-btn
               class="text-capitalize"
               @click="$router.push({ name: 'our-work' })"
+              :style="{ color: textNavbarColor }"
               >our work</v-btn
             >
           </li>
@@ -36,11 +43,15 @@
             <v-btn
               class="text-capitalize mx-4"
               @click="$router.push({ name: 'contact-us' })"
+              :style="{ color: textNavbarColor }"
               >contact</v-btn
             >
           </li>
           <li class="mt-3 mb-2 mx-2">
-            <v-btn class="text-capitalize" href="https:///wa.me/+201124908446"
+            <v-btn
+              class="text-capitalize"
+              href="https:///wa.me/+201124908446"
+              :style="{ color: textNavbarColor }"
               >pricing</v-btn
             >
           </li>
@@ -57,19 +68,28 @@ export default {
     return {
       drawer: false,
       navbarColor: "#000",
+      textNavbarColor: "#e8fff5",
     };
   },
   methods: {
     changeNavbarColor() {
       if (window.scrollY >= 300) {
-        this.navbarColor = "#071119";
+        this.navbarColor = "#efefef";
       } else {
         this.navbarColor = "#000";
+      }
+    },
+    changeColorNavbar() {
+      if (window.scrollY >= 300) {
+        this.textNavbarColor = "#000";
+      } else {
+        this.textNavbarColor = "#e8fff5";
       }
     },
   },
   mounted() {
     window.addEventListener("scroll", this.changeNavbarColor);
+    window.addEventListener("scroll", this.changeColorNavbar);
     this.emitter.on("openMenu", () => {
       this.drawer = true;
     });
@@ -78,6 +98,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.v-navigation-drawer {
+  opacity: 0.9;
+}
 .navbar-animation {
   transition: background-color 0.3s ease-in-out;
 }
