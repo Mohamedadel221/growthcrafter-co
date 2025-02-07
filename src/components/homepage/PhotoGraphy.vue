@@ -69,16 +69,11 @@
           loop
           effect="coverflow"
           :speed="1000"
-          :autoplay="{ delay: 1500 }"
+          :autoplay="{ delay: 1000 }"
           :grab-cursor="true"
           :centered-slides="true"
           :coverflow-effect="coverflowEffect"
-          :breakpoints="{
-            320: { slidesPerView: 2, spaceBetween: 0 },
-            768: { slidesPerView: 3, spaceBetween: 0 },
-            600: { slidesPerView: 2, spaceBetween: 0 },
-            1024: { slidesPerView: 4, spaceBetween: 0 },
-          }"
+          :breakpoints="breakPoints"
         >
           <swiper-slide v-for="(image, index) in imagesSwiper" :key="index">
             <img loading="lazy" class="w-100" :src="image" alt="Slide Image" />
@@ -115,6 +110,12 @@ export default {
       depth: 200, // زيادة العمق لتأثير ثلاثي الأبعاد أقوى
       modifier: 2.5, // تعديل قوة التأثير
       slideShadows: true, // تفعيل الظلال
+    },
+    breakPoints: {
+      320: { slidesPerView: 2, spaceBetween: 0 },
+      768: { slidesPerView: 3, spaceBetween: 0 },
+      600: { slidesPerView: 2, spaceBetween: 0 },
+      1024: { slidesPerView: 4, spaceBetween: 0 },
     },
   }),
 };

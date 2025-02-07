@@ -63,21 +63,32 @@ ul li {
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font: 10px !important;
   color: #01f28d !important;
   display: flex;
   padding: 5px;
   justify-content: center;
   align-items: center;
+  font-size: 30px !important;
 }
 
+@media (max-width: 767px) {
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    color: #01f28d !important;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px !important;
+  }
+}
 .bold-text {
   font-weight: 800;
 }
 
 /*navbar*/
 body {
-  background-color: #071119;
+  background-color: #000;
 }
 
 @media (max-width: 620px) {

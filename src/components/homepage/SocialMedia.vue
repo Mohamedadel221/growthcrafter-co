@@ -14,14 +14,6 @@
     <div class="soicl-media mt-2 pt-0">
       <v-container fluid>
         <v-row>
-          <v-col cols="12" md="4" sm="4" lg="4">
-            <img
-              class="w-100"
-              loading="lazy"
-              src="@/assets/SocialMedia/socialmedianew.jpeg"
-              alt=""
-            />
-          </v-col>
           <v-col cols="12" md="8" sm="8" lg="8">
             <img
               class="w-100"
@@ -42,6 +34,14 @@
               </v-col>
             </v-row>
           </v-col>
+          <v-col cols="12" md="4" sm="4" lg="4">
+            <img
+              class="w-100"
+              loading="lazy"
+              src="@/assets/SocialMedia/socialmedianew.jpeg"
+              alt=""
+            />
+          </v-col>
         </v-row>
       </v-container>
     </div>
@@ -52,19 +52,14 @@
           :slides-per-view="4"
           :space-between="0"
           navigation
-          :autoplay="{ delay: 1500 }"
           loop
           effect="coverflow"
           :speed="1000"
+          :autoplay="{ delay: 1000 }"
           :grab-cursor="true"
           :centered-slides="true"
           :coverflow-effect="coverflowEffect"
-          :breakpoints="{
-            320: { slidesPerView: 2, spaceBetween: 0 },
-            768: { slidesPerView: 3, spaceBetween: 0 },
-            600: { slidesPerView: 2, spaceBetween: 0 },
-            1024: { slidesPerView: 4, spaceBetween: 0 },
-          }"
+          :breakpoints="breakPoints"
         >
           <swiper-slide v-for="(image, index) in imagesSwiper" :key="index">
             <img class="w-100" loading="lazy" :src="image" alt="Slide Image" />
@@ -104,11 +99,17 @@ export default {
     ],
     moduels: [Navigation, Autoplay, EffectCoverflow],
     coverflowEffect: {
-      rotate: 43,
-      stretch: 0,
-      depth: 40,
-      modifier: 5,
-      slideShadows: true,
+      rotate: 50, // ميل السلايدز الجانبية
+      stretch: -20, // تقارب السلايدز لبعضها
+      depth: 200, // زيادة العمق لتأثير ثلاثي الأبعاد أقوى
+      modifier: 2.5, // تعديل قوة التأثير
+      slideShadows: true, // تفعيل الظلال
+    },
+    breakPoints: {
+      320: { slidesPerView: 2, spaceBetween: 0 },
+      768: { slidesPerView: 3, spaceBetween: 0 },
+      600: { slidesPerView: 2, spaceBetween: 0 },
+      1024: { slidesPerView: 4, spaceBetween: 0 },
     },
   }),
   components: {
