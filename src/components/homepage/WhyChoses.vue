@@ -8,7 +8,8 @@
             <div class="grid grid-1">
               <img
                 lazy="loading"
-                class="w-100"
+                class="w-100 wow animate__animated animate__zoomIn"
+                data-wow-delay="0.3"
                 src="@/assets/whycho/3.jpg"
                 alt=""
               />
@@ -16,7 +17,8 @@
             <div class="grid grid-2">
               <img
                 lazy="loading"
-                class="w-100"
+                class="w-100 wow animate__animated animate__zoomIn"
+                data-wow-delay="0.6"
                 src="@/assets/whycho/2.jpg"
                 alt=""
               />
@@ -24,8 +26,9 @@
             <div class="grid grid-3">
               <img
                 lazy="loading"
-                class="w-100"
+                class="w-100 wow animate__animated animate__zoomIn"
                 src="@/assets/whycho/1.jpg"
+                data-wow-delay="0.9"
                 alt=""
               />
             </div>
@@ -33,16 +36,25 @@
         </v-col>
         <v-col cols="12" lg="5" md="5" sm="5">
           <div
-            class="content-about-grid"
+            class="content-about-grid wow animate__animated animate__slideInDown"
+            data-wow-delay="0.3"
             v-for="conAbout in contentAbout"
             :key="conAbout.title"
           >
-            <div class="title-grid-three-img">
-              <h2 class="text-capitalize white-color mb-2 text-center">
+            <div
+              class="title-grid-three-img wow animate__animated animate__slideInLeft"
+            >
+              <h2
+                class="text-capitalize white-color mb-2 text-center"
+                data-wow-delay="0.6"
+              >
                 {{ conAbout.title }}
               </h2>
             </div>
-            <div class="content-grid-three-img mt-3 mb-2">
+            <div
+              class="content-grid-three-img mt-3 mb-2 wow animate__animated animate__slideInRight"
+              data-wow-delay="0.9"
+            >
               <p class="text-capitalize white-color bold-text">
                 {{ conAbout.descrip }}
               </p>

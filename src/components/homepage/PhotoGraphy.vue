@@ -6,7 +6,11 @@
       <h3 class="white-color position-relative pb-1">Photography</h3>
     </div>
     <div class="contnet-photography">
-      <p class="mt-0 mb-0 text-center text-capitalize white-color bold-text">
+      <p
+        class="mt-0 mb-0 text-center text-capitalize white-color bold-text wow animate__animated animate__fadeIn"
+        data-wow-delay="0.1s"
+        data-wow-duration="1s"
+      >
         From product photography to lifestyle shots, our team ensures that every
         image reflects your brand's identity
       </p>
@@ -15,7 +19,11 @@
       <v-container fluid>
         <v-row>
           <v-col cols="12" md="4" lg="4" sm="4">
-            <div class="grid-imgs mt-2">
+            <div
+              class="grid-imgs mt-2 wow animate__animated animate__fadeInLeft"
+              data-wow-delay="0.1s"
+              data-wow-duration="1s"
+            >
               <img
                 src="@/assets/PhotoGraphy/protriet.jpeg"
                 class="w-100"
@@ -25,7 +33,11 @@
             </div>
           </v-col>
           <v-col cols="12" md="8" lg="8" sm="8">
-            <div class="grid-imgs mt-2">
+            <div
+              class="grid-imgs mt-2 wow animate__animated animate__fadeInDown"
+              data-wow-delay="0.3s"
+              data-wow-duration="1s"
+            >
               <img
                 src="@/assets/PhotoGraphy/photo-bg.jpg"
                 class="w-100"
@@ -35,7 +47,11 @@
             </div>
             <v-row class="mt-3">
               <v-col col="6">
-                <div class="two-grid-img">
+                <div
+                  class="two-grid-img wow animate__animated animate__fadeInLeft"
+                  data-wow-delay="0.5s"
+                  data-wow-duration="1s"
+                >
                   <img
                     src="@/assets/PhotoGraphy/img_6878.jpg"
                     class="w-100"
@@ -45,7 +61,11 @@
                 </div>
               </v-col>
               <v-col col="6">
-                <div class="two-grid-img">
+                <div
+                  class="two-grid-img wow animate__animated animate__fadeInRight"
+                  data-wow-delay="0.7s"
+                  data-wow-duration="1s"
+                >
                   <img
                     src="@/assets/PhotoGraphy/3.png"
                     loading="lazy"
@@ -85,6 +105,7 @@
 </template>
 
 <script>
+import { WOW } from "wowjs";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/swiper-bundle.css";
 import { Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
@@ -105,11 +126,11 @@ export default {
     ],
     moduels: [Navigation, Autoplay, EffectCoverflow],
     coverflowEffect: {
-      rotate: 50, // ميل السلايدز الجانبية
-      stretch: -20, // تقارب السلايدز لبعضها
-      depth: 200, // زيادة العمق لتأثير ثلاثي الأبعاد أقوى
-      modifier: 2.5, // تعديل قوة التأثير
-      slideShadows: true, // تفعيل الظلال
+      rotate: 50,
+      stretch: -20,
+      depth: 200,
+      modifier: 2.5,
+      slideShadows: true,
     },
     breakPoints: {
       320: { slidesPerView: 2, spaceBetween: 0 },
@@ -118,6 +139,9 @@ export default {
       1024: { slidesPerView: 4, spaceBetween: 0 },
     },
   }),
+  mounted() {
+    new WOW().init();
+  },
 };
 </script>
 

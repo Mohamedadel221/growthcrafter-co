@@ -4,7 +4,10 @@
       <v-container fluid>
         <v-row class="align-center resv">
           <v-col cols="12" md="6" lg="6" sm="12">
-            <div class="img">
+            <div
+              class="img wow animate__animated animate__fadeInLeft"
+              data-wow-delay="0.3"
+            >
               <img
                 class="w-100"
                 src="@/assets/growthInsi/img_6773.png"
@@ -77,7 +80,14 @@
               </v-dialog>
             </div>
           </v-col>
-          <v-col cols="12" md="6" lg="6" sm="12">
+          <v-col
+            cols="12"
+            md="6"
+            lg="6"
+            sm="12"
+            class="wow animate__animated animate__fadeInRight"
+            data-wow-delay="0.3"
+          >
             <div
               class="text-capitalize main-title text-center position-relative mt-3 mb-2"
             >
@@ -107,6 +117,7 @@
   </div>
 </template>
 <script>
+import { WOW } from "wowjs";
 export default {
   data: () => ({
     tabs: {
@@ -140,6 +151,9 @@ export default {
       },
     ],
   }),
+  mounted() {
+    new WOW().init();
+  },
 };
 </script>
 <style scoped lang="scss">

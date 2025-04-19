@@ -6,7 +6,14 @@
   >
     <v-container fluid>
       <v-row class="align-center">
-        <v-col cols="12" md="6" sm="6" lg="6">
+        <v-col
+          cols="12"
+          md="6"
+          sm="6"
+          lg="6"
+          class="wow animate__animated animate__slideInLeft"
+          data-wow-delay="0.3s"
+        >
           <div class="text">
             <div class="title">
               <h1 class="text-capitalize text-center mt-3 mb-2 white-color">
@@ -20,7 +27,14 @@
             </div>
           </div>
         </v-col>
-        <v-col cols="12" md="6" sm="6" lg="6">
+        <v-col
+          cols="12"
+          md="6"
+          sm="6"
+          lg="6"
+          class="wow animate__animated animate__slideInRight"
+          data-wow-delay="0.5s"
+        >
           <div class="text text-end">
             <div class="img">
               <img class="w-100" :src="content.img" alt="" />

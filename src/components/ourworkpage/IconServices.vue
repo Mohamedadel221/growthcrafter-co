@@ -9,12 +9,19 @@
           sm="6"
           v-for="icons in titleIconOne"
           :key="icons.title"
+          class="wow animate__animated animate__fadeIn"
         >
-          <div class="box">
+          <div
+            class="box wow animate__animated animate__fadeIn"
+            data-wow-delay="0.1"
+          >
             <div class="img text-center">
               <img :src="icons.img" alt="" />
             </div>
-            <div class="text-box">
+            <div
+              class="text-box wow animate__animated animate__fadeIn"
+              data-wow-delay="0.3"
+            >
               <h3
                 v-html="icons.title"
                 class="text-capitalize text-center white-color"
@@ -25,6 +32,7 @@
         <v-col col="12" lg="6" md="6" sm="12">
           <div
             class="box larg-box"
+            data-wow-delay="0.5"
             v-for="servicesPro in servicesProvide"
             :key="servicesPro.title"
           >
@@ -65,22 +73,23 @@
 </template>
 
 <script>
+import { WOW } from "wowjs";
 export default {
   data: () => ({
     titleIconOne: [
       {
         img: require("@/assets/icons/bar-chart.png"),
-        title: `Business <span class="green-color"> <br/> Development</span>`,
+        title: `Business <span class="green-color  wow animate__animated animate__fadeIn"> <br/> Development</span>`,
       },
       {
         img: require("@/assets/icons/web-development.png"),
-        title: `Web Design <span class="green-color"> <br/> &Development</span>`,
+        title: `Web Design <span class="green-color  wow animate__animated animate__fadeIn"> <br/> &Development</span>`,
       },
     ],
     // services-provides //
     servicesProvide: [
       {
-        title: `services <span class="green-color"> <br/> Provided</span>`,
+        title: `services <span class="green-color  wow animate__animated animate__fadeIn"> <br/> Provided</span>`,
         desciription:
           "At Growth Crafters, we are committed to driving your busines growth with a comprehensive suite of services",
       },
@@ -88,22 +97,25 @@ export default {
     fourImgIcon: [
       {
         img: require("@/assets/icons/camera.png"),
-        title: `Photography <span class="green-color"><br/> &Videography</span><br>`,
+        title: `Photography <span class="green-color  wow animate__animated animate__fadeIn"><br/> &Videography</span><br>`,
       },
       {
         img: require("@/assets/icons/smartphone-call.png"),
-        title: `Social Media <span class="green-color"><br /> Management</span>`,
+        title: `Social Media <span class="green-color  wow animate__animated animate__fadeIn"><br /> Management</span>`,
       },
       {
         img: require("@/assets/icons/subscription.png"),
-        title: `Media Buying <span class="green-color"> <br />&performance</span>`,
+        title: `Media Buying <span class="green-color  wow animate__animated animate__fadeIn"> <br />&performance</span>`,
       },
       {
         img: require("@/assets/icons/coding.png"),
-        title: `Programmatic <span class="green-color"><br />&Native ads</span>`,
+        title: `Programmatic <span class="green-color  wow animate__animated animate__fadeIn"><br />&Native ads</span>`,
       },
     ],
   }),
+  mounted() {
+    new WOW().init();
+  },
 };
 </script>
 <style scoped lang="scss">

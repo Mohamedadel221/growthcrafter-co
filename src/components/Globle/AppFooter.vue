@@ -14,6 +14,9 @@
             md="3"
             lg="3"
             sm="3"
+            xs="6"
+            class="wow animate__animated animate__fadeIn"
+            data-wow-delay="0.3s"
             v-for="content in footerContent"
             :key="content.titleContent"
           >
@@ -68,6 +71,7 @@
 </template>
 
 <script>
+import { WOW } from "wowjs";
 export default {
   data: () => ({
     footerContent: [
@@ -118,6 +122,9 @@ export default {
       },
     ],
   }),
+  mounted() {
+    new WOW().init();
+  },
 };
 </script>
 

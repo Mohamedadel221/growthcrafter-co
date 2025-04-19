@@ -3,13 +3,19 @@
     <div
       class="text-capitalize main-titles text-center position-relative mt-3 mb-5"
     >
-      <h3 class="white-color position-relative pb-1">
+      <h3
+        class="white-color position-relative pb-1 wow animate__animated animate__fadeIn"
+        data-wow-delay="0.5"
+      >
         Commercial & advertising videography
       </h3>
     </div>
     <div class="video-graphy position-relative mt-3 pt-0 mb-0 pb-0">
       <div class="main-video-graphy position-relative mt-5 mb-2">
-        <div class="videogrpahy">
+        <div
+          class="videogrpahy wow animate__animated animate__fadeIn"
+          data-wow-delay="0.3s"
+        >
           <video autoplay muted loop playsinline class="videogrpahy">
             <source src="/videos/videobts.mp4" type="video/mp4" />
           </video>

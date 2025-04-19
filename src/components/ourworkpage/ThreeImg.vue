@@ -25,12 +25,25 @@
             v-for="textAndImg in largImg"
             :key="textAndImg.title"
           >
-            <img class="w-100" loading="lazy" :src="textAndImg.img" alt="" />
+            <img
+              class="w-100 wow animate__animated animate__fadeInLeft"
+              data-wow-delay="0.1s"
+              data-wow-duration="1s"
+              loading="lazy"
+              :src="textAndImg.img"
+              alt=""
+            />
           </div>
         </v-col>
         <v-col cols="12" md="7" sm="7" lg="7">
           <div class="img-our-work" v-for="img in threeImg" :key="img.img">
-            <img class="w-100" :src="img.img" alt="" />
+            <img
+              class="w-100 wow animate__animated animate__fadeInDown"
+              data-wow-delay="0.3s"
+              data-wow-duration="1s"
+              :src="img.img"
+              alt=""
+            />
             <div class="overlay">
               <a class="text-capitalize" :href="img.href" target="_blank">{{
                 img.title
@@ -47,7 +60,14 @@
               :key="img.imgs"
             >
               <div class="img-our-work mt-3">
-                <img loading="lazy" class="w-100" :src="img.imgs" alt="" />
+                <img
+                  loading="lazy"
+                  class="w-100 wow animate__animated animate__fadeInRight"
+                  data-wow-delay="0.5s"
+                  data-wow-duration="1s"
+                  :src="img.imgs"
+                  alt=""
+                />
                 <div class="overlay">
                   <a class="text-capitalize" :href="img.href" target="_blank">{{
                     img.title
@@ -63,6 +83,7 @@
 </template>
 
 <script>
+import { WOW } from "wowjs";
 export default {
   data: () => ({
     largImg: [
@@ -90,6 +111,9 @@ export default {
       },
     ],
   }),
+  mounted() {
+    new WOW().init();
+  },
 };
 </script>
 

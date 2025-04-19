@@ -6,7 +6,11 @@
       <h3 class="white-color position-relative pb-1">social media visuals</h3>
     </div>
     <div class="social-contents">
-      <p class="mt-0 mb-0 text-center text-capitalize white-color bold-text">
+      <p
+        class="wow animate__animated animate__fadeIn mt-0 mb-0 text-center text-capitalize white-color bold-text"
+        data-wow-delay="0.1s"
+        data-wow-duration="1s"
+      >
         Social media visuals that works to improve, display the brand image and
         deliver a clear and simple message to the customer.
       </p>
@@ -16,7 +20,9 @@
         <v-row>
           <v-col cols="12" md="8" sm="8" lg="8">
             <img
-              class="w-100"
+              class="w-100 wow animate__animated animate__fadeInLeft"
+              data-wow-delay="0.1s"
+              data-wow-duration="1s"
               src="@/assets/SocialMedia/social-mediabg.jpg"
               alt=""
               loading="lazy"
@@ -29,14 +35,23 @@
                 sm="6"
                 v-for="img in twoImg"
                 :key="img.threeImg"
+                class=""
+                data-wow-delay="0.3s"
+                data-wow-duration="1s"
               >
-                <img class="w-100" :src="img.img" alt="" />
+                <img
+                  class="w-100 wow animate__animated animate__fadeInLeft"
+                  :src="img.img"
+                  alt=""
+                />
               </v-col>
             </v-row>
           </v-col>
           <v-col cols="12" md="4" sm="4" lg="4">
             <img
-              class="w-100"
+              class="w-100 wow animate__animated animate__fadeInRight"
+              data-wow-delay="0.5s"
+              data-wow-duration="1s"
               loading="lazy"
               src="@/assets/SocialMedia/socialmedianew.jpeg"
               alt=""
@@ -71,6 +86,7 @@
 </template>
 
 <script>
+import { WOW } from "wowjs";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/swiper-bundle.css";
 import { Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
@@ -99,11 +115,11 @@ export default {
     ],
     moduels: [Navigation, Autoplay, EffectCoverflow],
     coverflowEffect: {
-      rotate: 50, // ميل السلايدز الجانبية
-      stretch: -20, // تقارب السلايدز لبعضها
-      depth: 200, // زيادة العمق لتأثير ثلاثي الأبعاد أقوى
-      modifier: 2.5, // تعديل قوة التأثير
-      slideShadows: true, // تفعيل الظلال
+      rotate: 50,
+      stretch: -20,
+      depth: 200,
+      modifier: 2.5,
+      slideShadows: true,
     },
     breakPoints: {
       320: { slidesPerView: 2, spaceBetween: 0 },
@@ -115,6 +131,9 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+  },
+  mounted() {
+    new WOW().init();
   },
 };
 </script>
