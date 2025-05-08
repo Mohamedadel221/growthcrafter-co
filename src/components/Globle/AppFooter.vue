@@ -10,7 +10,7 @@
       <v-container fluid>
         <v-row class="align-center">
           <v-col
-            cols="6"
+            :cols="6"
             md="3"
             lg="3"
             sm="3"
@@ -71,7 +71,6 @@
 </template>
 
 <script>
-import { WOW } from "wowjs";
 export default {
   data: () => ({
     footerContent: [
@@ -122,9 +121,6 @@ export default {
       },
     ],
   }),
-  mounted() {
-    new WOW().init();
-  },
 };
 </script>
 

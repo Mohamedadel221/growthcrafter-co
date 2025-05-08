@@ -165,7 +165,7 @@
 <script>
 import emailjs from "@emailjs/browser";
 import useVuelidate from "@vuelidate/core";
-import { required, email, minLength } from "@vuelidate/validators";
+import { required, email, minLength, helpers } from "@vuelidate/validators";
 export default {
   data: () => ({
     linksSocial: [
@@ -194,10 +194,20 @@ export default {
   }),
   validations() {
     return {
-      name: { required },
-      email: { required, email },
-      phoneNumber: { required, minLength: minLength(11) },
-      yourMessage: { required },
+      name: {
+        required: helpers.withMessage("Please Type Your Name", required),
+      },
+      email: {
+        required: helpers.withMessage("Example @gmail Or @Yahoo", required),
+        email,
+      },
+      phoneNumber: {
+        required: helpers.withMessage("Please Type PhoneNumber", required),
+        minLength: minLength(11),
+      },
+      yourMessage: {
+        required: helpers.withMessage("Please Type Your Message", required),
+      },
     };
   },
   methods: {
