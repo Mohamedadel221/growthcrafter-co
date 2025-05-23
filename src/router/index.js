@@ -1,13 +1,10 @@
+/* global gtag */
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import OurWork from "@/views/OurWork.vue";
-import ContactUs from "@/views/ContactUs.vue";
-import ErrorPage from "@/views/ErrorPage.vue";
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: () => import("../views/HomeView.vue"),
     meta: {
       title: "Growth Crafterco Home",
     },
@@ -15,7 +12,7 @@ const routes = [
   {
     path: "/our-work",
     name: "our-work",
-    component: OurWork,
+    component: () => import("@/views/OurWork.vue"),
     meta: {
       title: "Growth Crafterco Our Work",
     },
@@ -23,7 +20,7 @@ const routes = [
   {
     path: "/contact-us",
     name: "contact-us",
-    component: ContactUs,
+    component: () => import("@/views/ContactUs.vue"),
     meta: {
       title: "Growth Crafterco Contact Us",
     },
@@ -31,7 +28,7 @@ const routes = [
   {
     path: "/:catchAll(.*)",
     name: "error-page",
-    component: ErrorPage,
+    component: () => import("@/views/ErrorPage.vue"),
     meta: {
       title: "Page Not Found",
     },
@@ -42,11 +39,21 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior() {
-    return { top: 0 };
+    return {
+      top: 0,
+    };
   },
 });
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title;
   next();
+});
+//Google Analytics Tracking
+router.afterEach((to) => {
+  if (typeof gtag === "function") {
+    gtag("config", "G-90TFGFBELT'", {
+      page_path: to.fullPath,
+    });
+  }
 });
 export default router;

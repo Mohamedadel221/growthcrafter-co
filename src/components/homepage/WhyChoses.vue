@@ -81,6 +81,7 @@
 </template>
 
 <script>
+import { WOW } from "wowjs";
 export default {
   data: () => ({
     contentAbout: [
@@ -101,6 +102,9 @@ export default {
       },
     ],
   }),
+  mounted() {
+    new WOW().init();
+  },
 };
 </script>
 
@@ -113,37 +117,45 @@ export default {
     grid-template-columns: repeat(27, 1fr);
     position: relative;
   }
-  .imgs-grid .grid {
+  .imgs-grid {
     position: relative;
-    img {
-      border-radius: 12px;
+    .grid {
+      img {
+        border-radius: 12px;
+      }
     }
   }
-  .imgs-grid .grid.grid-1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 18;
-    grid-column: 1 / span 18;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 27;
-    grid-row: 1 / span 27;
+  .imgs-grid {
+    .grid.grid-1 {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 18;
+      grid-column: 1 / span 18;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 27;
+      grid-row: 1 / span 27;
+    }
   }
-  .imgs-grid .grid.grid-2 {
-    -ms-grid-column: 19;
-    -ms-grid-column-span: 27;
-    grid-column: 19 / span 27;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 5;
-    grid-row: 1 / span 5;
-    padding-left: 20px;
+  .imgs-grid {
+    .grid.grid-2 {
+      -ms-grid-column: 19;
+      -ms-grid-column-span: 27;
+      grid-column: 19 / span 27;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 5;
+      grid-row: 1 / span 5;
+      padding-left: 20px;
+    }
   }
-  .imgs-grid .grid.grid-3 {
-    -ms-grid-column: 14;
-    -ms-grid-column-span: 16;
-    grid-column: 14 / span 16;
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 27;
-    grid-row: 6 / span 27;
-    padding-top: 30px;
+  .imgs-grid {
+    .grid.grid-3 {
+      -ms-grid-column: 14;
+      -ms-grid-column-span: 16;
+      grid-column: 14 / span 16;
+      -ms-grid-row: 6;
+      -ms-grid-row-span: 27;
+      grid-row: 6 / span 27;
+      padding-top: 30px;
+    }
   }
 }
 /*three-img-grid*/
@@ -156,7 +168,7 @@ export default {
 @media (min-width: 320px) and (max-width: 991px) {
   .title-grid-three-img {
     h2 {
-      font-size: 16px !important;
+      font-size: 20px !important;
     }
   }
 }
@@ -168,7 +180,7 @@ export default {
   }
   .content-grid-three-img {
     p {
-      font-size: 10px;
+      font-size: 12px;
     }
   }
 }

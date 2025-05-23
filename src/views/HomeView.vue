@@ -18,9 +18,12 @@ import SocialMedia from "@/components/homepage/SocialMedia.vue";
 import VideoBts from "@/components/homepage/VideoBts.vue";
 import GrowthInsi from "@/components/homepage/GrowthInsi.vue";
 import WhyChoses from "@/components/homepage/WhyChoses.vue";
-
+import { WOW } from "wowjs";
 export default {
   name: "HomeView",
+  data: () => ({
+    wowInstance: null,
+  }),
   components: {
     TwoVideos,
     PartenrLogo,
@@ -29,6 +32,13 @@ export default {
     VideoBts,
     GrowthInsi,
     WhyChoses,
+  },
+  mounted() {
+    this.wowInstance = new WOW();
+    this.wowInstance.init();
+    this.$nextTick(() => {
+      this.wowInstance.sync();
+    });
   },
 };
 </script>

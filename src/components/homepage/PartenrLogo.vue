@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import { WOW } from "wowjs";
 export default {
   data: () => ({
     logos: [
@@ -67,9 +66,6 @@ export default {
       },
     ],
   }),
-  mounted() {
-    new WOW().init();
-  },
 };
 </script>
 

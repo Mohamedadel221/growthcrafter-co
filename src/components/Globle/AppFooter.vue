@@ -125,31 +125,43 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.logo-and-text {
-  p {
-    font-size: 14px;
+.v-footer {
+  padding: 0px !important;
+  .v-container {
+    padding: 0px !important;
   }
-  img {
-    margin: auto;
-    display: flex;
+  .logo-and-text {
+    p {
+      font-size: 14px;
+    }
+    img {
+      margin: auto;
+      display: flex;
+    }
+  }
+  .footer-content {
+    a,
+    router-link {
+      text-decoration: none;
+      font-size: 19px;
+      color: #fff;
+    }
+  }
+  ul li {
+    list-style: none;
+  }
+  .copy-right {
+    p {
+      text-align: center;
+    }
   }
 }
-.footer-content {
-  a,
-  router-link {
-    text-decoration: none;
-    font-size: 19px;
-    color: #fff;
-  }
-}
-ul li {
-  list-style: none;
-}
+
 @media (max-width: 815px) {
   .app-footer {
     a,
     router-link {
-      font-size: 15px !important;
+      font-size: 13px !important;
     }
   }
   .logo-and-text {

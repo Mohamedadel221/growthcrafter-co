@@ -9,7 +9,7 @@
               data-wow-delay="0.3"
             >
               <img
-                class="w-100"
+                class="w-100 position-relative"
                 src="@/assets/growthInsi/img_6773.png"
                 alt=""
                 loading="lazy"
@@ -117,7 +117,6 @@
   </div>
 </template>
 <script>
-import { WOW } from "wowjs";
 export default {
   data: () => ({
     tabs: {
@@ -151,19 +150,19 @@ export default {
       },
     ],
   }),
-  mounted() {
-    new WOW().init();
-  },
 };
 </script>
 <style scoped lang="scss">
 .gowrth-insi {
   padding: 0px 0.5px;
+  margin-bottom: -55px;
+  margin-top: -25px;
 }
 .img {
   position: relative;
   img {
     cursor: pointer;
+    margin-top: -47px;
   }
   .quick-view {
     position: absolute;
@@ -197,6 +196,11 @@ export default {
   .tab-single-img {
     width: 300px !important;
     height: 300px !important;
+  }
+  .contents {
+    p {
+      font-size: 12px;
+    }
   }
 }
 </style>

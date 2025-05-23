@@ -77,7 +77,13 @@
           :breakpoints="breakPoints"
         >
           <swiper-slide v-for="(image, index) in imagesSwiper" :key="index">
-            <img class="w-100" loading="lazy" :src="image" alt="Slide Image" />
+            <img
+              class="w-100 wow animate__animated animate__zoomInDown"
+              data-wow-delay="0.9"
+              loading="lazy"
+              :src="image"
+              alt="Slide Image"
+            />
           </swiper-slide>
         </swiper>
       </v-container>
@@ -86,7 +92,7 @@
 </template>
 
 <script>
-import { WOW } from "wowjs";
+// import { WOW } from "wowjs";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/swiper-bundle.css";
 import { Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
@@ -131,9 +137,6 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-  },
-  mounted() {
-    new WOW().init();
   },
 };
 </script>

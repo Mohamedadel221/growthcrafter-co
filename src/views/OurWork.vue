@@ -14,6 +14,7 @@ import IconServices from "@/components/ourworkpage/IconServices.vue";
 import ThreeImg from "@/components/ourworkpage/ThreeImg.vue";
 import TwoImg from "@/components/ourworkpage/TwoImg.vue";
 import CreativeMarket from "@/components/ourworkpage/CreativeMarket.vue";
+import { WOW } from "wowjs";
 export default {
   components: {
     TextandImg,
@@ -21,6 +22,9 @@ export default {
     ThreeImg,
     TwoImg,
     CreativeMarket,
+  },
+  mounted() {
+    new WOW().init();
   },
 };
 </script>

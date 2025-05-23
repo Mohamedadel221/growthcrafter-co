@@ -1,10 +1,24 @@
 <template>
   <app-layouts>
-    <transition name="fade" mode="out-in">
-      <router-view :key="$route.fullPath" />
-    </transition>
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" :key="$route.fullPath" />
+      </transition>
+    </router-view>
   </app-layouts>
 </template>
+
+<script>
+import "@/assets/style/style.scss";
+import AppLayouts from "./components/Globle/AppLayouts.vue";
+import "animate.css";
+
+export default {
+  components: {
+    AppLayouts,
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -12,6 +26,7 @@
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   overflow-y: hidden !important;
+  overflow: hidden;
 }
 .fade-enter-active,
 .fade-leave-active {
@@ -26,12 +41,3 @@ body {
   scroll-behavior: smooth;
 }
 </style>
-<script>
-import "@/assets/style/style.scss";
-import AppLayouts from "./components/Globle/AppLayouts.vue";
-export default {
-  components: {
-    AppLayouts,
-  },
-};
-</script>

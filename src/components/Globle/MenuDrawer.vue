@@ -25,6 +25,7 @@
         <ul class="">
           <li class="mt-3 mb-2 mx-2">
             <v-btn
+              :class="{ active: $route.path === '/' }"
               class="text-capitalize"
               @click="$router.push({ name: 'home' })"
               :style="{ color: textNavbarColor }"
@@ -33,6 +34,7 @@
           </li>
           <li class="mt-3 mb-2 mx-1">
             <v-btn
+              :class="{ active: $route.path === '/our-work' }"
               class="text-capitalize"
               @click="$router.push({ name: 'our-work' })"
               :style="{ color: textNavbarColor }"
@@ -41,6 +43,7 @@
           </li>
           <li class="mt-3 mb-2">
             <v-btn
+              :class="{ active: $route.path === '/contact-us' }"
               class="text-capitalize mx-4"
               @click="$router.push({ name: 'contact-us' })"
               :style="{ color: textNavbarColor }"
@@ -105,6 +108,9 @@ export default {
   transition: background-color 0.3s ease-in-out;
 }
 .menu-drawer {
+  .active {
+    color: #02ff96 !important;
+  }
   li {
     .v-btn {
       color: #e8fff5;

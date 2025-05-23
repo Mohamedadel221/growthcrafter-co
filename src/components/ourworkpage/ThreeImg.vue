@@ -83,7 +83,6 @@
 </template>
 
 <script>
-import { WOW } from "wowjs";
 export default {
   data: () => ({
     largImg: [
@@ -111,9 +110,6 @@ export default {
       },
     ],
   }),
-  mounted() {
-    new WOW().init();
-  },
 };
 </script>
 

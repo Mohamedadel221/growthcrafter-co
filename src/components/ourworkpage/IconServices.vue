@@ -73,7 +73,6 @@
 </template>
 
 <script>
-import { WOW } from "wowjs";
 export default {
   data: () => ({
     titleIconOne: [
@@ -113,9 +112,6 @@ export default {
       },
     ],
   }),
-  mounted() {
-    new WOW().init();
-  },
 };
 </script>
 <style scoped lang="scss">

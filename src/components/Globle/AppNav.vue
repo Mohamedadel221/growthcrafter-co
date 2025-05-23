@@ -16,6 +16,7 @@
       <ul class="d-flex align-center">
         <li class="">
           <v-btn
+            :class="{ active: $route.path === '/' }"
             class="text-capitalize navbar-animation"
             :style="{ color: textNavbarColor }"
             @click="$router.push({ name: 'home' })"
@@ -24,6 +25,7 @@
         </li>
         <li>
           <v-btn
+            :class="{ active: $route.path === '/our-work' }"
             class="text-capitalize navbar-animation"
             @click="$router.push({ name: 'our-work' })"
             :style="{ color: textNavbarColor }"
@@ -32,6 +34,7 @@
         </li>
         <li>
           <v-btn
+            :class="{ active: $route.path === '/contact-us' }"
             class="text-capitalize navbar-animation"
             @click="$router.push({ name: 'contact-us' })"
             :style="{ color: textNavbarColor }"
@@ -56,7 +59,7 @@
 export default {
   data: () => ({
     navbarColor: "#000",
-    textNavbarColor: "#e8fff5",
+    textNavbarColor: "#fff",
   }),
   mounted() {
     window.addEventListener("scroll", this.changeNavbarColor);
@@ -65,7 +68,7 @@ export default {
   methods: {
     changeNavbarColor() {
       if (window.scrollY >= 300) {
-        this.navbarColor = "#efefef";
+        this.navbarColor = "#fff";
       } else {
         this.navbarColor = "#000";
       }
@@ -74,7 +77,7 @@ export default {
       if (window.scrollY >= 300) {
         this.textNavbarColor = "#000";
       } else {
-        this.textNavbarColor = "#e8fff5";
+        this.textNavbarColor = "#fff";
       }
     },
   },
@@ -84,6 +87,9 @@ export default {
 <style scoped lang="scss">
 .v-app-bar {
   opacity: 0.7;
+  .active {
+    color: #02ff96 !important;
+  }
 }
 .navbar-animation {
   transition: background-color 0.3s ease-in-out;
